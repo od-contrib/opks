@@ -1,0 +1,25 @@
+From 3887a8e31f0c5b7631709636fefa2349962d9752 Mon Sep 17 00:00:00 2001
+From: Gleb Mazovetskiy <glex.spb@gmail.com>
+Date: Wed, 8 Apr 2020 20:01:49 +0100
+Subject: [PATCH] Makefile.gcw0: Add -mplt -mno-shared
+
+As per the advice of @senquack
+---
+ Makefile.gcw0 | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Makefile.gcw0 b/Makefile.gcw0
+index 363c3a1..fbc6458 100644
+--- a/Makefile.gcw0
++++ b/Makefile.gcw0
+@@ -31,6 +31,7 @@ MCD2_FILE = \"mcd002.mcr\"
+ C_ARCH = -mips32r2 -DSHMEM_MIRRORING
+ 
+ CFLAGS = $(C_ARCH) -O2 -DGCW_ZERO \
++	-mplt -mno-shared \
+ 	-Wall -Wunused -Wpointer-arith \
+ 	-Wno-sign-compare -Wno-cast-align \
+ 	-Isrc -Isrc/spu/$(SPU) -D$(SPU) -Isrc/gpu/$(GPU) \
+-- 
+2.25.1
+
