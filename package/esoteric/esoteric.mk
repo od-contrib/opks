@@ -8,6 +8,12 @@ ESOTERIC_SITE = $(call github,podulator,gmenunx,$(ESOTERIC_VERSION))
 ESOTERIC_DEPENDENCIES = dejavu libpng sdl sdl_ttf sdl_gfx
 ESOTERIC_INSTALL_TARGET = YES
 
+ifeq ($(BR2_TARGET_PLATFORM),"rg350")
+ESOTERIC_TARGET_PLATFORM=rg-350
+else
+$(error No platform mapping for $(BR2_TARGET_PLATFORM))
+endif
+
 ESOTERIC_MAKE_ENV = CROSS_COMPILE="$(TARGET_CROSS)"
 
 ifeq ($(BR2_PACKAGE_LIBOPK),y)
@@ -20,7 +26,7 @@ endif
 
 define ESOTERIC_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(ESOTERIC_MAKE_ENV) $(MAKE) -C $(@D) all dist \
-	  -f Makefile.$(BR2_PACKAGE_ESOTERIC_PLATFORM)
+	  -f Makefile.$(ESOTERIC_TARGET_PLATFORM)
 endef
 
 define ESOTERIC_INSTALL_ESOTERIC

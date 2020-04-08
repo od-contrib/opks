@@ -8,6 +8,12 @@ FB_ALPHA_VERSION = e4f7c3b9d3
 FB_ALPHA_SITE = $(call github,nobk,fba-sdl,$(FB_ALPHA_VERSION))
 FB_ALPHA_DEPENDENCIES = sdl sdl_image zlib
 
+ifeq ($(BR2_TARGET_PLATFORM),"rg350")
+else ifeq ($(BR2_TARGET_PLATFORM),"gcw0")
+else
+$(error No platform mapping for $(BR2_TARGET_PLATFORM))
+endif
+
 define FB_ALPHA_BUILD_CMDS
 	$(TARGET_MAKE_ENV) MAKELEVEL=0 $(MAKE1) -C $(@D) -f Makefile.dingux
 endef

@@ -9,10 +9,3 @@ config BR2_PACKAGE_COMMANDER
 
 	  https://github.com/glebm/rs97-commander/
 
-if BR2_PACKAGE_COMMANDER
-config BR2_PACKAGE_COMMANDER_TARGET_PLATFORM
-	string "Target platform (required)"
-	default "rg350"
-	help
-	  One of the target platforms supported by Commander.
-endif

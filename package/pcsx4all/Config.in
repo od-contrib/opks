@@ -7,9 +7,3 @@ config BR2_PACKAGE_PCSX4ALL
 	help
 	  pcsx4all emulator package
 	  https://github.com/dmitrysmagin/pcsx4all
-
-if BR2_PACKAGE_PCSX4ALL
-
-config BR2_PACKAGE_PCSX4ALL_PLATFORM
-	string "Target platform"
-endif

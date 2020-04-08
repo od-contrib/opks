@@ -6,8 +6,13 @@
 
 BLOCKATTACK_VERSION = c5cd33e7f72ef8bf0b12f0aca355a081c49b930f
 BLOCKATTACK_SITE = $(call github,blockattack,blockattack-game,$(BLOCKATTACK_VERSION))
-
 BLOCKATTACK_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf sdl2_mixer boost physfs utf8cpp gettext
+
+ifeq ($(BR2_TARGET_PLATFORM),"rg350")
+else ifeq ($(BR2_TARGET_PLATFORM),"gcw0")
+else
+$(error No platform mapping for $(BR2_TARGET_PLATFORM))
+endif
 
 BLOCKATTACK_CONF_OPTS += \
   -DCMAKE_CXX_FLAGS="-I$(STAGING_DIR)/usr/include/utf8cpp" \

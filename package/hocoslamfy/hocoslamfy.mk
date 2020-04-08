@@ -5,8 +5,13 @@
 #################################################################################
 HOCOSLAMFY_VERSION = rg350
 HOCOSLAMFY_SITE = $(call github,jamesofarrell,hocoslamfy,$(HOCOSLAMFY_VERSION))
-HOCOSLAMFY_AUTORECONF = YES
-HOCOSLAMFY_INSTALL_STAGING = YES
+HOCOSLAMFY_INSTALL_TARGET = YES
+
+ifeq ($(BR2_TARGET_PLATFORM),"rg350")
+else ifeq ($(BR2_TARGET_PLATFORM),"gcw0")
+else
+$(error No platform mapping for $(BR2_TARGET_PLATFORM))
+endif
 
 HOCOSLAMFY_DEPENDENCIES += libshake
 

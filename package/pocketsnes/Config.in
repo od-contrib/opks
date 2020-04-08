@@ -7,9 +7,3 @@ config BR2_PACKAGE_POCKETSNES
 	help
 	  PocketSNES emulator package
 	  https://github.com/soarqin/PocketSNES
-
-if BR2_PACKAGE_POCKETSNES
-
-config BR2_PACKAGE_POCKETSNES_PLATFORM
-	string "Target platform"
-endif
