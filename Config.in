@@ -1,0 +1,19 @@
+menu "OpenDingux contrib OPKs"
+comment "Emulators"
+  source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/fb-alpha/Config.in"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/pcsx4all/Config.in"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/pocketsnes/Config.in"
+
+comment "Frontends"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/esoteric/Config.in"
+
+comment "Games"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/blockattack/Config.in"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/devilutionx/Config.in"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/ghouls-and-ghosts-remix/Config.in"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/hocoslamfy/Config.in"
+
+comment "Applications"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/commander/Config.in"
+
+endmenu

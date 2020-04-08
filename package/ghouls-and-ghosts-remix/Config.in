@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GHOULS_AND_GHOSTS_REMIX
+	bool "ghouls-and-ghosts-remix"
+	depends on BR2_PACKAGE_ALLEGRO
+	help
+	  Ghouls 'n Ghosts Remix
