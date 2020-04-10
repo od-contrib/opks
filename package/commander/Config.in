@@ -9,3 +9,25 @@ config BR2_PACKAGE_COMMANDER
 
 	  https://github.com/glebm/rs97-commander/
 
+if BR2_PACKAGE_COMMANDER
+
+config BR2_PACKAGE_COMMANDER_AUTOSCALE
+	string "Enable automatic screen size and PPU detection"
+
+config BR2_PACKAGE_COMMANDER_WIDTH
+	string "Screen width"
+	help
+	  Commander will pick the best resolution by default as reported by SDL.
+	  This is unreliable on older kernels.
+	  Use this and the HEIGHT option to force a different one.
+
+config BR2_PACKAGE_COMMANDER_HEIGHT
+	string "Screen height"
+
+config BR2_PACKAGE_COMMANDER_PPU_X
+	string "Horizontal pixels per unit"
+
+config BR2_PACKAGE_COMMANDER_PPU_Y
+	string "Vertical pixels per unit"
+
+endif
