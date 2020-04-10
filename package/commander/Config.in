@@ -30,4 +30,7 @@ config BR2_PACKAGE_COMMANDER_PPU_X
 config BR2_PACKAGE_COMMANDER_PPU_Y
 	string "Vertical pixels per unit"
 
+config BR2_PACKAGE_COMMANDER_OPK_NAME
+	string "OPK file name (before the .opk extension)"
+
 endif
