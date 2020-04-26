@@ -33,4 +33,8 @@ config BR2_PACKAGE_COMMANDER_PPU_Y
 config BR2_PACKAGE_COMMANDER_OPK_NAME
 	string "OPK file name (before the .opk extension)"
 
+config BR2_PACKAGE_COMMANDER_FONTS
+	string "Font stack"
+	default "{\"Fiery_Turk.ttf\",8},{\"FreeSans.ttf\",10},{\"/usr/share/fonts/truetype/droid/DroidSansFallback.ttf\",9}"
+
 endif
