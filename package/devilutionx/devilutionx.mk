@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-DEVILUTIONX_VERSION = 6f7e522d
-DEVILUTIONX_SITE = $(call github,glebm,devilutionx,$(DEVILUTIONX_VERSION))
+DEVILUTIONX_VERSION = f66339a
+DEVILUTIONX_SITE = $(call github,diasurgical,devilutionx,$(DEVILUTIONX_VERSION))
 DEVILUTIONX_DEPENDENCIES = sdl sdl_mixer sdl_image sdl_ttf
 
 ifeq ($(BR2_TARGET_PLATFORM),"rg350")
