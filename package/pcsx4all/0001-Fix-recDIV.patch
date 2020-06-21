@@ -1,0 +1,27 @@
+From 23730d80060f8c7cb952b268596775ffc0bfd7e1 Mon Sep 17 00:00:00 2001
+From: Gleb Mazovetskiy <glex.spb@gmail.com>
+Date: Sun, 21 Jun 2020 10:32:15 +0100
+Subject: [PATCH] Fix recDIV
+
+---
+ src/recompiler/mips/rec_mdu.cpp.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/recompiler/mips/rec_mdu.cpp.h b/src/recompiler/mips/rec_mdu.cpp.h
+index 64906f3..3b8a9ad 100644
+--- a/src/recompiler/mips/rec_mdu.cpp.h
++++ b/src/recompiler/mips/rec_mdu.cpp.h
+@@ -297,8 +297,8 @@ static void recDIV()
+ 	if (rt_const)
+ 	{
+ 		// Check rs_const before using rs_val value here!
+-		u32 rs_val = GetConst(_Rs_);
+-		u32 rt_val = GetConst(_Rt_);
++		s32 rs_val = GetConst(_Rs_);
++		s32 rt_val = GetConst(_Rt_);
+ 
+ 		if (!rt_val) {
+ 			// If divisor operand is const 0:
+-- 
+2.25.1
+
