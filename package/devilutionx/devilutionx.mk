@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-DEVILUTIONX_VERSION = 1.1.0
+DEVILUTIONX_VERSION = 7940b3ae01
 DEVILUTIONX_SITE = $(call github,diasurgical,devilutionx,$(DEVILUTIONX_VERSION))
 DEVILUTIONX_DEPENDENCIES = sdl sdl_mixer sdl_image sdl_ttf
 
@@ -21,7 +21,7 @@ endif
 DEVILUTIONX_CONF_OPTS += \
 	-DTARGET_PLATFORM=$(DEVILUTIONX_TARGET_PLATFORM) \
 	-DBINARY_RELEASE=ON \
-	-DVERSION_NUM=1.0.1 -DVERSION_SUFFIX="-$(DEVILUTIONX_VERSION)"
+	-DVERSION_NUM=1.1.0 -DVERSION_SUFFIX="-$(DEVILUTIONX_VERSION)"
 
 define DEVILUTIONX_INSTALL_TARGET_CMDS
 	mkdir -p $(@D)/build-$(DEVILUTIONX_TARGET_PLATFORM)/
