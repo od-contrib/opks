@@ -5,7 +5,7 @@
 # A build dependency of glutexto, not installed to target.
 ################################################################################
 
-SPARROW3D_VERSION = 77dc9acc01
+SPARROW3D_VERSION = 2033349d
 SPARROW3D_SITE = $(call github,theZiz,sparrow3d,$(SPARROW3D_VERSION))
 
 SPARROW3D_TARGET_PLATFORM ?= $(call qstrip,$(BR2_PACKAGE_SPARROW3D_TARGET_PLATFORM))
