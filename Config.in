@@ -15,3 +15,6 @@ comment "Games"
 comment "Applications"
 	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/commander/Config.in"
 	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/glutexto/Config.in"
+
+comment "Libraries"
+	source "$BR2_EXTERNAL_OD_CONTRIB_OPKS_PATH/package/sparrow3d/Config.in"

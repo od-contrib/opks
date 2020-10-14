@@ -1,0 +1,10 @@
+config BR2_PACKAGE_SPARROW3D
+	bool "sparrow3d"
+	select BR2_PACKAGE_SDL
+	select BR2_PACKAGE_SDL_IMAGE
+	select BR2_PACKAGE_SDL_TTF
+	select BR2_PACKAGE_SDL_NET
+	help
+	  Sparrow3D is an application framework with software renderer especially for open handhelds.
+
+	  https://github.com/theZiz/sparrow3d

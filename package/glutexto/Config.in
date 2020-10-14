@@ -4,6 +4,7 @@ config BR2_PACKAGE_GLUTEXTO
 	select BR2_PACKAGE_SDL_MIXER
 	select BR2_PACKAGE_SDL_IMAGE
 	select BR2_PACKAGE_SDL_TTF
+	select BR2_PACKAGE_SPARROW3D
 	help
 	  A simple text editor.
 
