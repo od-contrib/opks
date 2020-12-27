@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-BLOCKATTACK_VERSION = c5cd33e7f72ef8bf0b12f0aca355a081c49b930f
+BLOCKATTACK_VERSION = 72287ac
 BLOCKATTACK_SITE = $(call github,blockattack,blockattack-game,$(BLOCKATTACK_VERSION))
-BLOCKATTACK_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf sdl2_mixer boost physfs utf8cpp gettext
+BLOCKATTACK_DEPENDENCIES += sdl2 sdl2_image sdl2_ttf sdl2_mixer boost physfs gettext
 
 ifeq ($(BR2_TARGET_PLATFORM),"rg350")
 else ifeq ($(BR2_TARGET_PLATFORM),"gcw0")
