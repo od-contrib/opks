@@ -4,6 +4,8 @@
 #
 ################################################################################
 
+# Using a slightly older version that does not have dependencies on "avir" and "png++".
+# See https://github.com/nobk/fba-sdl/issues/7.
 FB_ALPHA_VERSION = e4f7c3b9d3
 FB_ALPHA_SITE = $(call github,nobk,fba-sdl,$(FB_ALPHA_VERSION))
 FB_ALPHA_DEPENDENCIES = sdl sdl_image zlib
