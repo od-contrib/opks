@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-COMMANDER_VERSION = c9c03ba
+COMMANDER_VERSION = e5f008a
 COMMANDER_SITE = $(call github,od-contrib,commander,$(COMMANDER_VERSION))
 COMMANDER_DEPENDENCIES = sdl sdl_gfx sdl_image sdl_ttf
 
@@ -28,16 +28,17 @@ COMMANDER_OPK_EXT=$(COMMANDER_TARGET_PLATFORM)
 endif
 
 COMMANDER_CONF_OPTS += \
+	-DWITH_SYSTEM_SDL_GFX=ON -DWITH_SYSTEM_SDL_TTF=OFF \
 	-DTARGET_PLATFORM=$(COMMANDER_TARGET_PLATFORM) \
-	-DWITH_SYSTEM_SDL_GFX=ON \
-	-DFONTS=$(BR2_PACKAGE_COMMANDER_FONTS)
+	-DFONTS=$(BR2_PACKAGE_COMMANDER_FONTS) \
+	-DLOW_DPI_FONTS=$(BR2_PACKAGE_COMMANDER_FONTS_LOW_DPI)
 
 ifneq ($(BR2_TARGET_DEVICE),"rg350m")
 COMMANDER_CONF_OPTS += -DWITH_SYSTEM_SDL_TTF=ON
 endif
 
-ifneq ($(BR2_PACKAGE_COMMANDER_AUTOSCALE),"")
-COMMANDER_CONF_OPTS += -DAUTOSCALE=$(BR2_PACKAGE_COMMANDER_AUTOSCALE)
+ifeq ($(BR2_PACKAGE_COMMANDER_AUTOSCALE),y)
+COMMANDER_CONF_OPTS += -DAUTOSCALE=1
 endif
 
 ifneq ($(BR2_PACKAGE_COMMANDER_PPU_X),"")
@@ -70,7 +71,6 @@ define COMMANDER_INSTALL_TARGET_CMDS
 	  opkg/commander.png \
 	  res/*.png \
 	  res/Fiery_Turk.ttf \
-	  res/FreeSans.ttf \
 	  "$(COMMANDER_BUILDDIR)/commander" \
 	  "$(BINARIES_DIR)/opks/$(COMMANDER_OPK_NAME).opk" \
 	  -all-root -no-xattrs -noappend -no-exports
