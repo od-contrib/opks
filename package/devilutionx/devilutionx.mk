@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-DEVILUTIONX_VERSION = 7db206ea
+DEVILUTIONX_VERSION = fc05c55
 DEVILUTIONX_SITE = $(call github,diasurgical,devilutionx,$(DEVILUTIONX_VERSION))
 DEVILUTIONX_DEPENDENCIES = sdl sdl_mixer sdl_image sdl_ttf
 
