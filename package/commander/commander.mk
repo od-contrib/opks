@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-COMMANDER_VERSION = 90a169b4c021ba2d984bd1ab36d0b6e9c201b88f
+COMMANDER_VERSION = a9098839790a4b87b68c64d56245d0a49e324e7f
 COMMANDER_SITE = $(call github,od-contrib,commander,$(COMMANDER_VERSION))
 COMMANDER_DEPENDENCIES = sdl sdl_gfx sdl_image sdl_ttf
 
